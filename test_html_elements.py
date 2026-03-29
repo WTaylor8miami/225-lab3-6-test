@@ -18,7 +18,13 @@ class TestH5Tag(unittest.TestCase):
         driver.get("http://jenkins-225.cit.regionals.miamioh.edu/almafrtk6/")  # Replace with your target website (cluster IP!)
         
         # Locate the <h5> tag and get its text
-        h5_text = driver.find_element(By.TAG_NAME, "h5").text
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        wait = WebDriverWait(driver, 10)
+        h5_element = wait.until(EC.presence_of_element_located((By.TAG_NAME, "h5")))
+        h5_text = h5_element.text
+
+
         
         # Assert that the text of the <h5> tag is "Lab 3-6 Works!"
         self.assertEqual("Lab 3-6 Works!", h5_text, "The <h5> tag does not contain the text 'Lab 3-6 Works!'")
