@@ -15,7 +15,7 @@ class TestH5Tag(unittest.TestCase):
 
     def test_h5_tag_content(self):
         driver = self.driver
-        driver.get("10.48.228.100")  # Replace with your target website
+        driver.get("http://jenkins-225.cit.regionals.miamioh.edu/almafrtk6/")  # Replace with your target website
         
         # Locate the <h5> tag and get its text
         h5_text = driver.find_element(By.TAG_NAME, "h5").text
