@@ -15,13 +15,15 @@ class TestH5Tag(unittest.TestCase):
 
     def test_h5_tag_content(self):
         driver = self.driver
-        driver.get("http://jenkins-225.cit.regionals.miamioh.edu/almaftrk-lab3-6/")  # Replace with your target website (cluster IP!)
-        
-        # Locate the <h5> tag and get its text
+        driver.get("http://jenkins-225.cit.regionals.miamioh.edu:8080/almafrtk6/")
+
+        print("CURRENT URL:", driver.current_url)
+        print("PAGE TITLE:", driver.title)
+        print("PAGE SOURCE START:")
+        print(driver.page_source[:1000])
+
         h5_text = driver.find_element(By.TAG_NAME, "h5").text
-        
-        # Assert that the text of the <h5> tag is "Lab 3-6 Works!"
-        self.assertEqual("Lab 3-6 Works!", h5_text, "The <h5> tag does not contain the text 'Lab 3-6 Works!'")
+        self.assertEqual("Lab 3-6 Works!", h5_text)
 
     def tearDown(self):
         self.driver.quit()
