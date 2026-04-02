@@ -14,7 +14,7 @@ class TestH5Tag(unittest.TestCase):
 
     def test_h5_tag_content(self):
         driver = self.driver
-        driver.get("http://jenkins-225.cit.regionals.miamioh.edu:8080/almafrtk6/")
+        driver.get("https://10.48.228.100")
 
         from selenium.webdriver.support.ui import WebDriverWait
         from selenium.webdriver.support import expected_conditions as EC
