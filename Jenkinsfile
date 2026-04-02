@@ -2,8 +2,8 @@ pipeline {
     agent any 
 
     environment {
-        DOCKER_CREDENTIALS_ID = 'almafrtk-dockerhub'
-        DOCKER_IMAGE = 'cits225/225-lab3-6'                                                                    //<------change this
+        DOCKER_CREDENTIALS_ID = 'roseaw-dockerhub'
+        DOCKER_IMAGE = 'almafrtk/225-lab3-6'                                                                    //<------change this
         IMAGE_TAG = "build-${BUILD_NUMBER}"
         GITHUB_URL = 'https://github.com/TibaAlMafrachi/225-lab3-6.git'                                          //<------change this
         KUBECONFIG = credentials('almafrtk-225-sp26')                                                         //<------change this
