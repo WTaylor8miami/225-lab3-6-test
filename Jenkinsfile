@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_CREDENTIALS_ID = 'almafrtk-dockerhub'
-        DOCKER_IMAGE = 'cithit\almarftk'                                                                    //<------change this
+        DOCKER_IMAGE = 'cithit\almarftk/225-lab3-6'                                                                    //<------change this
         IMAGE_TAG = "build-${BUILD_NUMBER}"
         GITHUB_URL = 'https://github.com/TibaAlMafrachi/225-lab3-6.git'                                          //<------change this
         KUBECONFIG = credentials('almafrtk-225-sp26')                                                         //<------change this
