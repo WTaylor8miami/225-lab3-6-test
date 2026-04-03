@@ -27,7 +27,7 @@ spec:
   - host: 
     http:
       paths:
-      - path: /
+      - path: /almafrtk6-prod(/|$)(.*)
         pathType: ImplementationSpecific
         backend: 
           service:
